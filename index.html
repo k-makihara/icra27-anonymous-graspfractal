@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="description"
@@ -40,54 +40,41 @@
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
 </head>
-<body>
+<body id="top">
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
+<nav class="navbar site-navbar" role="navigation" aria-label="Main navigation">
+  <div class="container is-max-desktop">
+    <div class="navbar-brand">
+      <a class="navbar-item site-brand" href="#top" aria-label="Nerfies home">
+        <span class="site-brand-mark" aria-hidden="true"></span>
+        <span>Nerfies</span>
       </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
+      <a role="button" class="navbar-burger" aria-label="Open menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#overview">Overview</a>
+        <a class="navbar-item" href="#results">Results</a>
+        <a class="navbar-item" href="#method">Method</a>
+        <a class="navbar-item" href="#applications">Applications</a>
+        <a class="navbar-item" href="#video">Video</a>
+        <a class="navbar-item" href="#BibTeX">BibTeX</a>
       </div>
     </div>
-
   </div>
 </nav>
 
 
-<section class="hero">
+<section class="hero publication-hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
+          <p class="eyebrow">ICCV 2021 · Project Page</p>
           <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
@@ -166,6 +153,7 @@
                   </span>
                   <span>Data</span>
                   </a>
+              </span>
             </div>
 
           </div>
@@ -175,10 +163,38 @@
   </div>
 </section>
 
+<section class="section overview-section" id="overview">
+  <div class="container is-max-desktop">
+    <div class="columns is-variable is-5 overview-grid">
+      <div class="column">
+        <div class="overview-card">
+          <span class="overview-number">01</span>
+          <h2 class="title is-5">Casual capture</h2>
+          <p>Reconstruct a scene from photos or videos captured with a mobile phone.</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="overview-card">
+          <span class="overview-number">02</span>
+          <h2 class="title is-5">Non-rigid scenes</h2>
+          <p>Model motion and deformation with a continuous volumetric deformation field.</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="overview-card">
+          <span class="overview-number">03</span>
+          <h2 class="title is-5">Novel viewpoints</h2>
+          <p>Render photorealistic portraits from viewpoints that were never observed.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
+      <video id="teaser" class="media-frame" autoplay muted loop playsinline height="100%" aria-label="Nerfies teaser video">
         <source src="./static/videos/teaser.mp4"
                 type="video/mp4">
       </video>
@@ -192,9 +208,14 @@
 </section>
 
 
-<section class="hero is-light is-small">
+<section class="section results-section" id="results">
   <div class="hero-body">
-    <div class="container">
+    <div class="container is-max-desktop">
+      <div class="section-heading has-text-centered">
+        <p class="section-kicker">Results</p>
+        <h2 class="title is-2">Free-viewpoint reconstructions</h2>
+        <p class="subtitle is-5">Explore reconstructions across people, objects, and motion.</p>
+      </div>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-steve">
           <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
@@ -250,11 +271,12 @@
 </section>
 
 
-<section class="section">
+<section class="section content-section" id="method">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+    <div class="columns is-centered has-text-centered section-block">
+      <div class="column is-four-fifths content-card">
+        <p class="section-kicker">Method</p>
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
@@ -290,11 +312,13 @@
     <!--/ Abstract. -->
 
     <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
+    <div class="columns is-centered has-text-centered section-block" id="video">
       <div class="column is-four-fifths">
+        <p class="section-kicker">Presentation</p>
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
           <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  title="Nerfies project video"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
@@ -304,14 +328,20 @@
 </section>
 
 
-<section class="section">
+<section class="section applications-section" id="applications">
   <div class="container is-max-desktop">
+
+    <div class="section-heading has-text-centered">
+      <p class="section-kicker">Applications</p>
+      <h2 class="title is-2">Create, isolate, and animate</h2>
+      <p class="subtitle is-5">The reconstructed scene supports effects, matting, and controllable playback.</p>
+    </div>
 
     <div class="columns is-centered">
 
       <!-- Visual Effects. -->
       <div class="column">
-        <div class="content">
+        <div class="content feature-card">
           <h2 class="title is-3">Visual Effects</h2>
           <p>
             Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
@@ -327,6 +357,7 @@
 
       <!-- Matting. -->
       <div class="column">
+        <div class="feature-card">
         <h2 class="title is-3">Matting</h2>
         <div class="columns is-centered">
           <div class="column content">
@@ -341,13 +372,14 @@
           </div>
 
         </div>
+        </div>
       </div>
     </div>
     <!--/ Matting. -->
 
     <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
+    <div class="columns is-centered section-block">
+      <div class="column is-full-width content-card">
         <h2 class="title is-3">Animation</h2>
 
         <!-- Interpolating. -->
@@ -411,8 +443,8 @@
 
 
     <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
+    <div class="columns is-centered section-block" id="related">
+      <div class="column is-full-width content-card">
         <h2 class="title is-3">Related Links</h2>
 
         <div class="content has-text-justified">
@@ -441,7 +473,7 @@
 </section>
 
 
-<section class="section" id="BibTeX">
+<section class="section citation-section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{park2021nerfies,
@@ -458,10 +490,13 @@
   <div class="container">
     <div class="content has-text-centered">
       <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
+         href="https://arxiv.org/pdf/2011.12948"
+         aria-label="Read the Nerfies paper">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+      <a class="icon-link external-link"
+         href="https://github.com/google/nerfies"
+         aria-label="View the Nerfies source code">
         <i class="fab fa-github"></i>
       </a>
     </div>

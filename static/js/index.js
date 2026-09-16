@@ -26,7 +26,13 @@ $(document).ready(function() {
       // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
       $(".navbar-burger").toggleClass("is-active");
       $(".navbar-menu").toggleClass("is-active");
+      $(this).attr("aria-expanded", $(this).hasClass("is-active"));
+    });
 
+    // Collapse the mobile menu after selecting a section.
+    $(".navbar-menu .navbar-item").click(function() {
+      $(".navbar-burger").removeClass("is-active").attr("aria-expanded", "false");
+      $(".navbar-menu").removeClass("is-active");
     });
 
     var options = {
