@@ -2,6 +2,8 @@
 
 This is the repository that contains source code for the [Nerfies website](https://nerfies.github.io).
 
+This repository is being used as the website template for the GraspFractal project.
+
 If you find Nerfies useful for your work please cite:
 ```
 @article{park2021nerfies
