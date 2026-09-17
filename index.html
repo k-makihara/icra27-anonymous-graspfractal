@@ -42,7 +42,7 @@
           <p class="hero-subtitle">Formula-Generated 3D Meshes for Grasp Quality Prediction</p>
           <p class="hero-lede">
             A scan-free pipeline that turns parameterized fractal point sets into closed 3D meshes,
-            depth observations, and analytic grasp-quality labels for robotic grasp learning.
+            depth observations, and analytic grasp-quality labels following the Dex-Net 2.0 pipeline.
           </p>
           <div class="hero-actions">
             <a class="button button-primary" href="#overview">Explore the method</a>
@@ -94,7 +94,7 @@
           <p>
             Grasp-FractalDB generates category-independent objects from a parameterized 3D Iterated
             Function System. The resulting point sets are filtered, reconstructed as closed meshes
-            with alpha shapes, and passed through a common analytic grasp-labeling pipeline.
+            with alpha shapes, and passed through the Dex-Net 2.0 analytic grasp-labeling pipeline.
             Experiments test whether this compact, formula-driven source of geometry transfers to
             real-object models and physical picking.
           </p>
@@ -110,7 +110,7 @@
         <article class="contribution-card">
           <span class="card-index">02</span>
           <h3>Automatic supervision</h3>
-          <p>Pairs rendered depth crops with analytic grasp-quality labels using a consistent 4-DoF grasp pipeline.</p>
+          <p>Pairs rendered depth crops with analytic grasp-quality labels using a consistent Dex-Net 2.0 4-DoF grasp pipeline.</p>
         </article>
         <article class="contribution-card">
           <span class="card-index">03</span>
@@ -174,7 +174,7 @@
           <p>
             Each object is scaled for a 50 mm parallel-jaw gripper. Stable poses, grasp candidates,
             collision constraints, randomized camera views, and analytic labels are then generated
-            under a common protocol.
+            under a common protocol for training a Grasp Quality Convolutional Neural Network (GQ-CNN).
           </p>
         </div>
         <figure class="figure-card">
@@ -289,7 +289,7 @@
           <p class="kicker">Real-world validation</p>
           <h2>Formula-only training transfers to physical picking</h2>
           <p>
-            A grasp-quality network trained from scratch on Grasp-FractalDB selects candidate
+            A GQ-CNN trained from scratch on Grasp-FractalDB selects candidate
             grasps from depth observations. Six objects are tested over 20 trials each, with varied
             initial orientations.
           </p>
